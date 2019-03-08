@@ -35,7 +35,6 @@ t_block		*get_last_block(t_block **map)
 	}
 	if (i == 1024)
 		return (NULL);
-	//printf("list = %d\n", i);
 	return (buf);
 }
 

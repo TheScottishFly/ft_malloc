@@ -34,11 +34,11 @@ void		*tiny_malloc(size_t size)
 	else
 	{
 		if (!(last = get_last_block(&g_maps.tiny)))
-            return (NULL);
-        b = (void*)last->data + TINY_SIZE;
+			return (NULL);
+		b = (void*)last->data + TINY_SIZE;
 		last->next = b;
 	}
-    fill_block(b, size);
+	fill_block(b, size);
 	return (b->data);
 }
 
@@ -57,7 +57,7 @@ void		*small_malloc(size_t size)
 	else
 	{
 		if (!(last = get_last_block(&g_maps.small)))
-            return (NULL);
+			return (NULL);
 		b = (void*)last->data + SMALL_SIZE;
 		last->next = b;
 	}
